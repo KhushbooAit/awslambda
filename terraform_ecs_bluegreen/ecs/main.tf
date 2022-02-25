@@ -29,7 +29,7 @@ resource "aws_ecs_task_definition" "ecs-task-definition" {
   family                   = var.ecs_service_name
   cpu                      = var.cpu
   memory                   = var.memory
-  requires_compatibilities = ["FARGATE"]
+  requires_compatibilities = ["EC2"]
   network_mode             = "awsvpc"
   execution_role_arn       = var.execution_role_arn
   task_role_arn            = var.task_role_arn
